@@ -1,0 +1,605 @@
+{
+  "clientLogos": [
+    {
+      "id": "logo-1",
+      "companyName": "MongoDB",
+      "logoUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=40&q=80",
+      "websiteUrl": "https://mongodb.com",
+      "displayOrder": 1,
+      "status": "Active",
+      "postedBy": "July 14, 2023 / 12:15 PM",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "logo-2",
+      "companyName": "MongoDB",
+      "logoUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=40&q=80",
+      "websiteUrl": "https://mongodb.com",
+      "displayOrder": 2,
+      "status": "Inactive",
+      "postedBy": "July 14, 2023 / 12:15 PM",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "logo-3",
+      "companyName": "MongoDB",
+      "logoUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=40&q=80",
+      "websiteUrl": "https://mongodb.com",
+      "displayOrder": 3,
+      "status": "Active",
+      "postedBy": "July 14, 2023 / 12:15 PM",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "title": "UI/UX Design",
+      "highlightText": "Crafted interfaces that convert and delight.",
+      "description": "We create user journeys and prototypes optimized for both experience and development.",
+      "category": "Design",
+      "points": [
+        "Pixel-perfect responsive design for web & app",
+        "Dev-ready handoff with reusable design systems"
+      ],
+      "icon": "Figma",
+      "displayOrder": 1,
+      "status": "Published",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "srv-2",
+      "title": "Website Design & Launch",
+      "highlightText": "From layout to live — your online presence starts here.",
+      "description": "Custom sites designed to reflect your brand and drive engagement.",
+      "category": "Tech",
+      "points": [
+        "5-page site with hosting & domain included",
+        "Animation, contact forms, and CTA-ready layout"
+      ],
+      "icon": "Globe",
+      "displayOrder": 2,
+      "status": "Published",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "srv-3",
+      "title": "Branding & Identity",
+      "highlightText": "Visual identity built to last.",
+      "description": "Logos, color palettes, and brand guides designed for long-term recognition.",
+      "category": "Design",
+      "points": [
+        "Logo kit, icons, typography & style guide",
+        "Social media and document branding assets"
+      ],
+      "icon": "PenTool",
+      "displayOrder": 3,
+      "status": "Published",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "srv-4",
+      "title": "Social Media Design",
+      "highlightText": "Consistent, branded content that grows your digital footprint.",
+      "description": "From static posts to dynamic stories, we deliver monthly packs that perform.",
+      "category": "Tech",
+      "points": [
+        "Templates for posts, carousels, and reels",
+        "Highlights, profile kits, and ad creatives"
+      ],
+      "icon": "Share2",
+      "displayOrder": 4,
+      "status": "Published",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "tst-1",
+      "userName": "Jennifer Law",
+      "companyName": "Spotify",
+      "highlightText": "Outstanding delivery",
+      "content": "Working with this team has completely streamlined our design cycles. The quality of execution is outstanding.",
+      "rating": 5,
+      "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
+      "displayOrder": 1,
+      "status": "Active",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "tst-2",
+      "userName": "Skylar Calzoni",
+      "companyName": "Stripe",
+      "highlightText": "Incredibly professional",
+      "content": "Their design system transition saved our frontend developer team easily 30+ hours. Super helpful team.",
+      "rating": 5,
+      "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80",
+      "displayOrder": 2,
+      "status": "Active",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "cs-1783750317863",
+      "title": "Boon Web Application (Copy)",
+      "company": "Boon Technology",
+      "category": "SaaS Design",
+      "liveViewUrl": "https://example.com/demo",
+      "timelines": "3 Months",
+      "serviceProvided": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "status": "Draft",
+      "slug": "boon-web-app-copy-950",
+      "seoTitle": "Boon Web App SaaS Design",
+      "seoDescription": "High perf SaaS App",
+      "createdAt": "2026-07-11T06:11:57.863Z",
+      "contentBlocks": [
+        {
+          "id": "blk-1783750317863-146916",
+          "type": "Heading",
+          "content": "Empowering Learning & Careers with AI-Driven Precision",
+          "settings": {
+            "alignment": "center",
+            "marginTop": "24px",
+            "marginBottom": "16px"
+          }
+        },
+        {
+          "id": "blk-1783750317863-638946",
+          "type": "Paragraph",
+          "content": "AI LMS is an advanced Learning And Career Development Platform designed for students, mentors, and recruiters. It features AI-Powered interviews, course mapping, and personalized learning pathways.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-1783750317863-574174",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Client Name",
+              "value": "d2dSpot"
+            },
+            {
+              "label": "Project Name",
+              "value": "Levaal"
+            },
+            {
+              "label": "Category",
+              "value": "SaaS Platform"
+            },
+            {
+              "label": "Duration",
+              "value": "12 Weeks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-1783750297144",
+      "title": "Boon Web Application (Copy)",
+      "company": "Boon Technology",
+      "category": "SaaS Design",
+      "liveViewUrl": "https://example.com/demo",
+      "timelines": "3 Months",
+      "serviceProvided": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "status": "Draft",
+      "slug": "boon-web-app-copy-122",
+      "seoTitle": "Boon Web App SaaS Design",
+      "seoDescription": "High perf SaaS App",
+      "createdAt": "2026-07-11T06:11:37.144Z",
+      "contentBlocks": [
+        {
+          "id": "blk-1783750297144-372377",
+          "type": "Heading",
+          "content": "Empowering Learning & Careers with AI-Driven Precision",
+          "settings": {
+            "alignment": "center",
+            "marginTop": "24px",
+            "marginBottom": "16px"
+          }
+        },
+        {
+          "id": "blk-1783750297144-567338",
+          "type": "Paragraph",
+          "content": "AI LMS is an advanced Learning And Career Development Platform designed for students, mentors, and recruiters. It features AI-Powered interviews, course mapping, and personalized learning pathways.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-1783750297144-848030",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Client Name",
+              "value": "d2dSpot"
+            },
+            {
+              "label": "Project Name",
+              "value": "Levaal"
+            },
+            {
+              "label": "Category",
+              "value": "SaaS Platform"
+            },
+            {
+              "label": "Duration",
+              "value": "12 Weeks"
+            }
+          ]
+        },
+        {
+          "id": "blk-1783951279828-61914",
+          "type": "Image",
+          "content": "",
+          "settings": {
+            "alignment": "left"
+          },
+          "images": [
+            "https://images.unsplash.com/photo-1779896411959-26149949fdc3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-1783750296201",
+      "title": "Boon Web Application (Copy)",
+      "company": "Boon Technology",
+      "category": "SaaS Design",
+      "liveViewUrl": "https://example.com/demo",
+      "timelines": "3 Months",
+      "serviceProvided": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "status": "Draft",
+      "slug": "boon-web-app-copy-812",
+      "seoTitle": "Boon Web App SaaS Design",
+      "seoDescription": "High perf SaaS App",
+      "createdAt": "2026-07-11T06:11:36.201Z",
+      "contentBlocks": [
+        {
+          "id": "blk-1783750296201-904769",
+          "type": "Heading",
+          "content": "Empowering Learning & Careers with AI-Driven Precision",
+          "settings": {
+            "alignment": "center",
+            "marginTop": "24px",
+            "marginBottom": "16px"
+          }
+        },
+        {
+          "id": "blk-1783750296201-349850",
+          "type": "Paragraph",
+          "content": "AI LMS is an advanced Learning And Career Development Platform designed for students, mentors, and recruiters. It features AI-Powered interviews, course mapping, and personalized learning pathways.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-1783750296201-496229",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Client Name",
+              "value": "d2dSpot"
+            },
+            {
+              "label": "Project Name",
+              "value": "Levaal"
+            },
+            {
+              "label": "Category",
+              "value": "SaaS Platform"
+            },
+            {
+              "label": "Duration",
+              "value": "12 Weeks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-1783750294832",
+      "title": "Boon Web Application (Copy)",
+      "company": "Boon Technology",
+      "category": "SaaS Design",
+      "liveViewUrl": "https://example.com/demo",
+      "timelines": "3 Months",
+      "serviceProvided": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "status": "Draft",
+      "slug": "boon-web-app-copy-698",
+      "seoTitle": "Boon Web App SaaS Design",
+      "seoDescription": "High perf SaaS App",
+      "createdAt": "2026-07-11T06:11:34.832Z",
+      "contentBlocks": [
+        {
+          "id": "blk-1783750294832-285465",
+          "type": "Heading",
+          "content": "Empowering Learning & Careers with AI-Driven Precision",
+          "settings": {
+            "alignment": "center",
+            "marginTop": "24px",
+            "marginBottom": "16px"
+          }
+        },
+        {
+          "id": "blk-1783750294832-378889",
+          "type": "Paragraph",
+          "content": "AI LMS is an advanced Learning And Career Development Platform designed for students, mentors, and recruiters. It features AI-Powered interviews, course mapping, and personalized learning pathways.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-1783750294832-757506",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Client Name",
+              "value": "d2dSpot"
+            },
+            {
+              "label": "Project Name",
+              "value": "Levaal"
+            },
+            {
+              "label": "Category",
+              "value": "SaaS Platform"
+            },
+            {
+              "label": "Duration",
+              "value": "12 Weeks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-1",
+      "title": "Boon Web Application",
+      "company": "Boon Technology",
+      "category": "SaaS Design",
+      "liveViewUrl": "https://example.com/demo",
+      "timelines": "3 Months",
+      "serviceProvided": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "status": "Active",
+      "slug": "boon-web-app",
+      "seoTitle": "Boon Web App SaaS Design",
+      "seoDescription": "High perf SaaS App",
+      "createdAt": "2023-07-14T12:15:00Z",
+      "contentBlocks": [
+        {
+          "id": "block-1",
+          "type": "Heading",
+          "content": "Empowering Learning & Careers with AI-Driven Precision",
+          "settings": {
+            "alignment": "center",
+            "marginTop": "24px",
+            "marginBottom": "16px"
+          }
+        },
+        {
+          "id": "block-2",
+          "type": "Paragraph",
+          "content": "AI LMS is an advanced Learning And Career Development Platform designed for students, mentors, and recruiters. It features AI-Powered interviews, course mapping, and personalized learning pathways.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "block-3",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Client Name",
+              "value": "d2dSpot"
+            },
+            {
+              "label": "Project Name",
+              "value": "Levaal"
+            },
+            {
+              "label": "Category",
+              "value": "SaaS Platform"
+            },
+            {
+              "label": "Duration",
+              "value": "12 Weeks"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blg-1",
+      "title": "Boon Web Application Design system",
+      "slug": "boon-design-system",
+      "category": "SaaS Design",
+      "readTime": "5 Mins Read",
+      "tags": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1541462608141-2758574e4055?auto=format&fit=crop&w=400&h=250&q=80",
+      "content": "Full visual analysis of design tokens, interactive components, and responsive typography grid guidelines.",
+      "status": "Published",
+      "createdAt": "2023-07-14T12:15:00Z",
+      "blocks": [
+        {
+          "id": "blk-b1",
+          "type": "Heading",
+          "content": "About System Architecture",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-b2",
+          "type": "Paragraph",
+          "content": "Building modular responsive tokens under Tailwind CSS for fast compilation.",
+          "settings": {
+            "alignment": "left"
+          }
+        }
+      ]
+    }
+  ],
+  "contactLeads": [
+    {
+      "id": "lead-1",
+      "name": "Jennifer Law",
+      "email": "jennifer@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "Spotify Ltd",
+      "message": "Let's connect regarding a design request.",
+      "status": "Clients",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "lead-2",
+      "name": "Skylar Calzoni",
+      "email": "calzoni@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "Stripe Inc",
+      "message": "We need help transitioning to Tailwind CSS.",
+      "status": "Screening",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "lead-3",
+      "name": "Alfredo Gouse",
+      "email": "alfredo@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "DesignCo",
+      "message": "Love your recent Case Studies. Can we schedule a call?",
+      "status": "Screening",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "lead-4",
+      "name": "James Carder",
+      "email": "james@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "Acme Inc",
+      "message": "Requesting quote for landing page rewrite.",
+      "status": "Lead",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "media": [
+    {
+      "id": "media-1",
+      "name": "mongodb_logo.png",
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=40&q=80",
+      "type": "logo",
+      "size": "45 KB",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "media-2",
+      "name": "boon_case_cover.png",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "type": "image",
+      "size": "180 KB",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "media-3",
+      "name": "jennifer_profile.jpg",
+      "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
+      "type": "image",
+      "size": "32 KB",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "settings": {
+    "general": {
+      "siteName": "d2dSpot CMS",
+      "siteDescription": "Premium Portfolio CMS for Studios and Solopreneurs"
+    },
+    "branding": {
+      "logoUrl": "",
+      "faviconUrl": ""
+    },
+    "contact": {
+      "email": "vigneshvaithi2001@gmail.com",
+      "phone": "+1234567890",
+      "address": "San Francisco, CA"
+    },
+    "social": {
+      "linkedin": "https://linkedin.com/in/vigneshv",
+      "x": "https://x.com/vigneshv",
+      "github": "https://github.com/vigneshv",
+      "instagram": "",
+      "youtube": ""
+    },
+    "email": {
+      "resendApiKey": "",
+      "fromEmail": "onboarding@resend.dev"
+    },
+    "seo": {
+      "defaultMetaTitle": "d2dSpot | High Performance Design & Engineering Portfolio",
+      "defaultMetaDescription": "We create premium visual identity, robust software applications, and SaaS designs that scale effortlessly."
+    }
+  },
+  "folders": [
+    {
+      "id": "folder-case-studies",
+      "name": "Case Studies",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    },
+    {
+      "id": "folder-blogs",
+      "name": "Blogs",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    },
+    {
+      "id": "folder-logos",
+      "name": "Client Logos",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    },
+    {
+      "id": "folder-testimonials",
+      "name": "Testimonials",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    }
+  ]
+}

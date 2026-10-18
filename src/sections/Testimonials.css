@@ -1,0 +1,338 @@
+/* ══════════════════════════════════════════════════
+   Testimonials Section — CSS marquee auto-scroll
+   ══════════════════════════════════════════════════ */
+
+/* ── Section shell ── */
+.testi-section {
+  width: 100%;
+  background-color: #020106;
+  padding: 100px 0 100px 80px; /* no right padding — marquee bleeds to edge */
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Two-column: fixed left info panel + full-width marquee */
+.testi-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ══ LEFT PANEL ══════════════════════════════════ */
+.testi-left {
+  flex-shrink: 0;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ✦ Testimonials label */
+.testi-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Heading */
+.testi-heading {
+  font-family: 'Inter', 'Neue Montreal', sans-serif;
+  font-size: clamp(26px, 2.4vw, 38px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Subtle hint text */
+.testi-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+/* ══ MARQUEE AREA ══════════════════════════════════ */
+.testi-marquee-outer {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;   /* clip cards at container edge */
+}
+
+/* Left + right edge fades */
+.testi-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.testi-fade-l {
+  left: 0;
+  background: linear-gradient(to right, #020106 0%, transparent 100%);
+}
+
+.testi-fade-r {
+  right: 0;
+  background: linear-gradient(to left, #020106 0%, transparent 100%);
+}
+
+/*
+  Two strips side-by-side.
+  Animate from translateX(0) → translateX(-50%) = one full strip width.
+  This creates a seamless infinite loop.
+  Hovering the track pauses: animation-play-state: paused.
+*/
+.testi-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: stretch;
+  animation: testi-scroll 28s linear infinite;
+  padding: 10px 0 16px;
+}
+
+/* Pause on hover over any card */
+.testi-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes testi-scroll {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Strip = one full set of cards */
+.testi-marquee-strip {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  flex-shrink: 0;
+  padding-right: 20px; /* gap between last card and first of next strip */
+}
+
+/* ══ CARD ══════════════════════════════════════════ */
+.testi-card {
+  flex-shrink: 0;
+  width: 420px;
+  background: #020106;
+  border-radius: 20px;
+  outline: 1px solid #555555;
+  outline-offset: -1px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.testi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 72px rgba(75, 78, 252, 0.25);
+}
+
+/* Glow blob layer */
+.testi-card-glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.testi-glow {
+  position: absolute;
+  border-radius: 9999px;
+}
+
+.testi-glow.g1 {
+  width: 220px; height: 122px;
+  left: 222px;  top: 140px;
+  background: #4B4EFC;
+  filter: blur(47px);
+  transform: rotate(22deg);
+  opacity: 0.9;
+}
+
+.testi-glow.g2 {
+  width: 495px; height: 152px;
+  left: 312px;  top: 200px;
+  background: #7375FD;
+  filter: blur(34px);
+  transform: rotate(23deg);
+  opacity: 0.7;
+}
+
+.testi-glow.g3 {
+  width: 438px; height: 292px;
+  left: 112px;  top: 125px;
+  background: #4B4EFC;
+  filter: blur(47px);
+  transform: rotate(32deg);
+  opacity: 0.8;
+}
+
+.testi-glow.g4 {
+  width: 281px; height: 55px;
+  left: 79px;   top: 320px;
+  background: #C3C4FE;
+  filter: blur(29px);
+  opacity: 0.6;
+}
+
+/* Card content */
+.testi-card-body {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.testi-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.testi-card-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testi-card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.testi-flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Avatar */
+.testi-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Rating */
+.testi-rating-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.testi-score {
+  font-family: 'Inter', sans-serif;
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+}
+
+.testi-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-bottom: 10px;
+}
+
+/* Quote */
+.testi-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #ffffff;
+  margin: 6px 0 0;
+}
+
+/* ══ RESPONSIVE ══════════════════════════════════ */
+
+/* ── Tablet (≤ 1100px) ── */
+@media (max-width: 1100px) {
+  .testi-section {
+    padding: 80px 0 80px 40px;
+  }
+
+  .testi-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .testi-left {
+    width: 100%;
+    padding-right: 40px; /* match right side gap */
+  }
+
+  .testi-card {
+    width: 380px;
+  }
+}
+
+/* ── Mobile (≤ 640px) ── */
+@media (max-width: 640px) {
+  .testi-section {
+    padding: 60px 0 60px 20px;
+  }
+
+  .testi-left {
+    padding-right: 20px;
+  }
+
+  .testi-card {
+    width: 300px;
+  }
+
+  .testi-score {
+    font-size: 54px;
+  }
+
+  .testi-quote {
+    font-size: 17px;
+  }
+
+  /* Slightly faster on mobile */
+  .testi-marquee-track {
+    animation-duration: 20s;
+  }
+}
+
+/* ── Very small (≤ 380px) ── */
+@media (max-width: 380px) {
+  .testi-card {
+    width: 260px;
+  }
+
+  .testi-score {
+    font-size: 46px;
+  }
+}

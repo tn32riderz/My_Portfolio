@@ -1,0 +1,22 @@
+
+<svg width="1200" height="750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#09090b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#18181b;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="750" fill="url(#grad)"/>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+  <rect x="80" y="80" width="1040" height="590" rx="16" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <circle cx="120" cy="120" r="8" fill="#ef4444"/>
+  <circle cx="145" cy="120" r="8" fill="#f59e0b"/>
+  <circle cx="170" cy="120" r="8" fill="#10b981"/>
+  <text x="600" y="340" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#ffffff" text-anchor="middle">Realla AI Real Estate</text>
+  <text x="600" y="395" font-family="system-ui, sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">Interface View 02</text>
+  <rect x="480" y="440" width="240" height="44" rx="22" fill="#38bdf8" opacity="0.15" stroke="#38bdf8" stroke-width="1"/>
+  <text x="600" y="468" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="1">DESIGN CASE STUDY</text>
+</svg>

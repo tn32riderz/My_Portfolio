@@ -1,0 +1,166 @@
+/* About Me Section Styling */
+
+.about-section {
+  width: 100%;
+  /* height is set dynamically via inline style in AboutMe.js,
+     computed from word count so it always adapts to content changes */
+  background-color: #020106;
+  position: relative;
+  z-index: 10;
+}
+
+.about-sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  overflow: hidden;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left Column: Heading with progress indicator line */
+.about-left {
+  width: 100%;
+}
+
+.about-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.about-sparkle {
+  color: #4B4EFC;
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(75, 78, 252, 0.4);
+}
+
+.about-title-text {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: -0.1px;
+}
+
+.about-line-arrow {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.15);
+  margin-left: 8px;
+}
+
+.about-line {
+  height: 1px;
+  flex-grow: 1;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Right Column: Statement & CTA */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-statement {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(26px, 3.2vw, 42px);
+  font-weight: 400;
+  line-height: 1.32;
+  color: #ffffff;
+  margin-bottom: 48px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.22em 0.22em;
+}
+
+/* Word Reveal Overlay Styling */
+.about-word-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.about-word-bg {
+  /* Ghost placeholder — sits behind the animated fg span */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.15;
+  color: #ffffff;
+  pointer-events: none;
+  user-select: none;
+  white-space: pre; /* Keep exact text width, never wrap */
+}
+
+.about-word-fg {
+  /* Animated foreground — framer-motion drives opacity 0→1 via inline style */
+  position: relative;
+  display: inline; /* inline avoids creating a new stacking context that dims the color */
+  color: #ffffff;
+}
+
+.about-cta-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  /* height: auto — controlled by JS */
+
+  .about-sticky-wrapper {
+    padding: 0 40px;
+  }
+  
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-line-arrow {
+    max-width: 250px; /* Constrain indicator line on smaller viewports */
+  }
+  
+  .about-statement {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* height: auto — controlled by JS */
+
+  .about-sticky-wrapper {
+    padding: 0 24px;
+  }
+  
+  .about-container {
+    gap: 32px;
+  }
+  
+  .about-title-text {
+    font-size: 16px;
+  }
+  
+  .about-line-arrow {
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,99 @@
+/* Experience Crossing Ticker Styling */
+
+.ticker-section {
+  position: relative;
+  width: 100%;
+  height: 260px; /* Spacing height for crossing bands */
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.ticker-band {
+  position: absolute;
+  width: 140vw; /* Span past screen borders to cover rotated corners */
+  height: 52px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(79.05% 110.71% at 50.67% -66.96%, #F5F5FF 0%, #4B4EFC 100%);
+  border-top: 0.77px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 0.77px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(75, 78, 252, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.band-down {
+  transform: rotate(-4deg);
+  z-index: 3;
+}
+
+.band-up {
+  transform: rotate(4deg);
+  z-index: 2; /* Crosses behind band-down */
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  padding-right: 4px;
+  text-transform: uppercase;
+}
+
+/* High performance GPU-accelerated scrolling animations */
+.track-left .ticker-content {
+  animation: scroll-left 35s linear infinite;
+}
+
+.track-right .ticker-content {
+  animation: scroll-right 35s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ticker-section {
+    height: 200px;
+  }
+  .ticker-band {
+    height: 44px;
+  }
+  .ticker-item {
+    font-size: 12.5px;
+    letter-spacing: 0.05em;
+  }
+}

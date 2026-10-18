@@ -1,0 +1,103 @@
+/* ══════════════════════════════════════════════════
+   WorkTicker  —  "Let's Work Together" infinite marquee
+   ══════════════════════════════════════════════════ */
+
+.workticker-section {
+  width: 100%;
+  background-color: #020106;
+  overflow: hidden;               /* clip the scrolling strip */
+  position: relative;
+  z-index: 10;
+  /* top + bottom border lines matching the Figma band */
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* The scrolling row — two identical strips side-by-side */
+.workticker-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  /* GPU-accelerated scroll to the left */
+  animation: workticker-scroll 50s linear infinite;
+}
+
+/* Each strip is a horizontal sequence of units */
+.workticker-strip {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 46px 0;
+}
+
+/* One unit = star + text */
+.workticker-unit {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 15px; /* gap between units */
+}
+
+/* Star sparkle icon */
+.workticker-star {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  /* subtle slow rotation for life */
+  animation: workticker-spin 12s linear infinite;
+}
+
+/* Headline text */
+.workticker-text {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 75px;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.15;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+/* Scroll keyframe — moves exactly one strip-width to the left */
+@keyframes workticker-scroll {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Gentle star rotation */
+@keyframes workticker-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 1024px) {
+  .workticker-text {
+    font-size: 52px;
+  }
+  .workticker-star {
+    width: 56px;
+    height: 56px;
+  }
+  .workticker-strip {
+    padding: 36px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .workticker-text {
+    font-size: 36px;
+  }
+  .workticker-star {
+    width: 38px;
+    height: 38px;
+  }
+  .workticker-strip {
+    padding: 28px 0;
+  }
+  .workticker-track {
+    animation-duration: 16s; /* slightly faster on mobile */
+  }
+}
