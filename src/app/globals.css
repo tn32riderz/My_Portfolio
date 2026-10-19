@@ -1,4 +1,6 @@
 :root {
+  /* one gentle ease-out for every scroll reveal, so sections arrive with the same feel */
+  --ease-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
   --background: #020106;
   --foreground: #ffffff;
 }
@@ -36,3 +38,21 @@ a {
 }
 
 
+
+/* Lenis (smooth scroll) recommended base rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

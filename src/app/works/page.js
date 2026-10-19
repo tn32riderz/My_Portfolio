@@ -1,23 +1,14 @@
-import fs from 'fs/promises';
-import path from 'path';
-import WorksGallery from './WorksGallery';
+import { getPublishedProjects } from '@/lib/projects';
+import { getImageMetaMap } from '@/lib/imageMeta';
+import WorksGallery from '@/components/works/WorksGallery';
 
 export const metadata = {
-  title: 'All Works | Portfolio',
-  description: 'Browse all creative projects — UI/UX, branding, web design, and more.',
+  title: 'Projects | Portfolio',
+  description: 'Browse all projects — case studies, product design and web builds.',
 };
 
 export default async function WorksPage() {
-  let db = {};
-  try {
-    const dbPath = path.join(process.cwd(), 'src', 'db.json');
-    const raw = await fs.readFile(dbPath, 'utf-8');
-    db = JSON.parse(raw);
-  } catch {
-    // fallback to empty
-  }
-
-  const caseStudies = (db.caseStudies || []).filter(cs => cs.status === 'Active' || cs.status === 'Published');
-
-  return <WorksGallery caseStudies={caseStudies} />;
+  const projects = await getPublishedProjects();
+  const meta = await getImageMetaMap(projects.map((p) => p.coverImage));
+  return <WorksGallery projects={projects.map((p) => ({ ...p, coverBlur: meta[p.coverImage]?.blur }))} />;
 }

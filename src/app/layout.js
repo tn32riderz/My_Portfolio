@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header";
+import Header from "@/components/layout/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "My Portfolio",
-  description: "Creative design portfolio website",
-};
+import { yearsOfExperience } from "@/data/profile";
+import { getExperienceContent } from "@/lib/content";
+
+export async function generateMetadata() {
+  const { careerStart } = await getExperienceContent();
+  return {
+    title: "Vignesh Vaithiyanathan | AI Lead Product Designer",
+    description: `AI Lead Product Designer with ${yearsOfExperience(careerStart)} years of experience across AI, SaaS and enterprise products. View selected work, experience and resume.`,
+  };
+}
 
 export default function RootLayout({ children }) {
   return (

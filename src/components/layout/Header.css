@@ -1,0 +1,349 @@
+/* Glassmorphic Sticky Header CSS */
+
+:root {
+  --header-height: 80px;
+  --primary-gradient: radial-gradient(ellipse 110.72% 79.22% at 50.67% -66.96%, #F5F5FF 0%, #4B4EFC 100%);
+  --btn-gradient: radial-gradient(ellipse 100% 71.4% at 50% 0%, #F5F5FF 0%, #4B4EFC 71%);
+  --glass-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(96, 73, 245, 0.10) 56%, rgba(0, 0, 0, 0.10) 100%);
+  --outline-color: rgba(255, 255, 255, 0.60);
+  --shadow-color: rgba(75, 78, 252, 0.15);
+}
+
+.portfolio-header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.portfolio-header-inner {
+  width: 100%;
+  max-width: 1376px;
+  height: 64px;
+  padding: 0 20px 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border-radius: 1000px;
+  box-shadow: 0 10px 32px 0 var(--shadow-color);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.portfolio-header-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 1000px;
+  -webkit-box-shadow: inset 1px 1px 0px -1px rgb(255, 255, 255), inset 0 0 1.5px 0.5px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 1px 1px 0px -1px rgb(255, 255, 255), inset 0 0 1.5px 0.5px rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-header-inner::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: 1000px;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  -webkit-filter: url(#container-glass);
+  filter: url(#container-glass);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Logo Sizing & Display */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #ffffff;
+  /* White letters */
+}
+
+.header-logo-svg {
+  display: block;
+  height: 46px; /* fits inside the 64px bar with even space above and below */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+
+/* Premium Navigation Toggle Pill */
+.nav-toggle-pill {
+  padding: 4px;
+  background: #ffffff;
+  box-shadow: inset 0px 0.67px 2px #4B4EFC, 0px 0.67px 0.67px rgba(255, 255, 255, 0.07);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  list-style: none;
+}
+
+.nav-link-btn {
+  padding: 11px 20px;
+  border-radius: 100px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #000000;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.nav-link-btn:hover {
+  color: #4B4EFC;
+  transform: translateY(-1px);
+}
+
+/* Active Pill Link Styling */
+.nav-link-btn.active-pill {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  background: var(--primary-gradient);
+  background-blend-mode: overlay, overlay, normal;
+  background-image: url(data:image/png;base64,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);
+  outline: 0.67px rgba(255, 255, 255, 0.19) solid;
+  outline-offset: -0.67px;
+  box-shadow: 0px 4px 10px rgba(75, 78, 252, 0.4);
+}
+
+/* Link component Button styling ("Start a Project") */
+.custom-premium-btn {
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 0.77px solid rgba(255, 255, 255, 0.2);
+  background: radial-gradient(79.05% 110.71% at 50.67% -66.96%, #F5F5FF 0%, #4B4EFC 100%);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.20s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(75, 78, 252, 0.15);
+}
+
+.custom-premium-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(75, 78, 252, 0.25);
+}
+
+.custom-premium-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-text {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.btn-arrow-icon {
+  font-size: 26px;
+  color: #ffffff;
+  transition: transform 0.20s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-premium-btn:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Mobile Hamburger Toggle Button */
+.hamburger-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  outline: none;
+}
+
+.hamburger-toggle-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger open state micro-animations */
+.hamburger-toggle-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-toggle-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-toggle-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Sidebar Navigation (Mobile Menu Drawer) */
+.mobile-sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-sidebar-backdrop.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(20, 20, 35, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%);
+  border-left: 1px rgba(255, 255, 255, 0.1) solid;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  padding: 100px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-sidebar-menu.show {
+  transform: translateX(0);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-link {
+  font-family: 'Neue Montreal', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: #4B4EFC;
+  padding-left: 8px;
+}
+
+.mobile-sidebar-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-sidebar-footer .custom-premium-btn {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* RESPONSIVE DESIGN - BREAKPOINTS */
+
+/* Laptops and Desktops */
+@media (min-width: 1024px) {
+  .portfolio-header-container {
+    padding: 0 32px;
+  }
+}
+
+/* iPads and Tablets (Landscape and Portrait) */
+@media (max-width: 1023px) {
+  .portfolio-header-container {
+    padding: 0 16px;
+  }
+
+  .portfolio-header-inner {
+    padding: 0 16px;
+    height: 58px;
+  }
+
+  /* Hide Desktop links and CTA, show hamburger */
+  .desktop-nav-menu {
+    display: none;
+  }
+
+  .desktop-cta-btn {
+    display: none;
+  }
+
+  .hamburger-toggle-btn {
+    display: flex;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .portfolio-header-container {
+    padding: 0 12px;
+    height: 70px;
+  }
+
+  .portfolio-header-inner {
+    padding: 0 12px;
+    border-radius: 20px;
+    /* softer rounded corners on mobile */
+  }
+
+  .logo-container {
+    padding: 8px 8px;
+  }
+}

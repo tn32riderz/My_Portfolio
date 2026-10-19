@@ -1,0 +1,290 @@
+/* Projects Section */
+
+.projects-section {
+  width: 100%;
+  background-color: #020106;
+  padding: 100px 80px 120px;
+  position: relative;
+  z-index: 10;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ─── Section Header ─────────────────────── */
+.projects-header {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s var(--ease-smooth), transform 1s var(--ease-smooth);
+}
+
+.projects-header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.projects-sparkle {
+  color: #4B4EFC;
+  font-size: 14px;
+  text-shadow: 0 0 8px rgba(75, 78, 252, 0.5);
+}
+
+.projects-label-text {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.04em;
+}
+
+.projects-heading {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* ─── Sticky card stack ──────────────────── */
+.stack {
+  position: relative;
+  --stack-hold: 70svh; /* how long each card rests, in scroll distance, before the next slides in */
+}
+
+.stack-hold {
+  height: var(--stack-hold);
+}
+
+.stack-card {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 104px 0 28px; /* clears the fixed site header */
+}
+
+.stack-card__inner {
+  position: relative;
+  display: block;
+  width: min(1180px, 100%);
+  height: 100%;
+  max-height: 720px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0c0c14;
+  border: 0.77px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  transform-origin: 50% 50%;
+  will-change: transform;
+  color: #ffffff;
+}
+
+.stack-card__img {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.stack-card__inner:hover .stack-card__img {
+  transform: scale(1.04);
+}
+
+.stack-card__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(2, 1, 6, 0.9) 0%, rgba(2, 1, 6, 0.35) 45%, rgba(2, 1, 6, 0) 70%);
+}
+
+/* darkens as the next card covers this one */
+.stack-card__shade {
+  position: absolute;
+  inset: 0;
+  background: #020106;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.stack-card__count {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(2, 1, 6, 0.55);
+  backdrop-filter: blur(8px);
+  border: 0.77px solid rgba(255, 255, 255, 0.15);
+}
+
+.stack-card__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(20px, 3vw, 44px);
+}
+
+.stack-card__title {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(26px, 3.4vw, 52px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.stack-card__desc {
+  max-width: 60ch;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(14px, 1.2vw, 17px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stack-card__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.stack-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-card__tag {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12.5px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.77px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+}
+
+.stack-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: gap 0.25s ease;
+}
+
+.stack-card__inner:hover .stack-card__cta {
+  gap: 14px;
+}
+
+.stack-card__inner:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* ─── Split layout: pinned side panel + card stack ─── */
+.projects-split {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.projects-side {
+  position: sticky;
+  top: 0;
+  /* Same box as a pinned card (full screen, 104px header clearance, 28px bottom), centred like the card is */
+  height: 100vh;
+  height: 100svh;
+  padding: 104px 0 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.projects-btn-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ─── Responsive ─────────────────────────── */
+@media (max-width: 1023px) {
+  .projects-section {
+    padding: 80px 40px 100px;
+  }
+  .projects-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .projects-side {
+    position: static;
+    height: auto;
+    padding: 0;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .stack-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .stack {
+    --stack-hold: 50svh;
+  }
+  .stack-card {
+    padding-top: 92px;
+    padding-bottom: 20px;
+  }
+  .stack-card__inner {
+    max-height: 78svh;
+    border-radius: 22px;
+  }
+  .stack-card__count {
+    top: 16px;
+    left: 16px;
+  }
+  .stack-card__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-section {
+    padding: 60px 20px 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-card__img,
+  .stack-card__cta {
+    transition: none;
+  }
+}

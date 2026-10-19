@@ -1,0 +1,205 @@
+/* ButtonGradient Vanilla CSS Styles */
+
+.btn-gradient-wrapper {
+  width: fit-content;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 16px;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: normal;
+  background: radial-gradient(79.05% 110.71% at 50.67% -66.96%, #F5F5FF 0%, #4B4EFC 100%);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  box-shadow: 0 4px 10px rgba(75, 78, 252, 0.15);
+}
+
+/* Responsive height/padding/font-size */
+@media (min-width: 640px) {
+  .btn-gradient-wrapper {
+    height: 44px;
+    padding: 0 20px;
+    gap: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Hover State */
+.btn-gradient-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(75, 78, 252, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Active State */
+.btn-gradient-wrapper:active {
+  transform: scale(0.95);
+}
+
+/* Disabled State */
+.btn-gradient-wrapper:disabled,
+.btn-gradient-wrapper.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: scale(1) !important;
+  box-shadow: none !important;
+}
+
+/* Noise layers styling */
+.noise-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.noise-layer.noise-1 {
+  opacity: 0.20;
+  z-index: 1;
+}
+
+.noise-layer.noise-2 {
+  opacity: 0.15;
+  z-index: 2;
+}
+
+.noise-layer.noise-3 {
+  opacity: 0.10;
+  z-index: 3;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  transition: opacity 0.3s ease-out;
+}
+
+.btn-gradient-wrapper:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Button text layout */
+.btn-text-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  whitespace: nowrap;
+}
+
+/* Active Nav Link specific styling overrides */
+.nav-active-gradient {
+  height: 34px !important;
+  padding: 0 14px !important;
+  font-size: 13.5px !important;
+  border-radius: 100px !important; /* Matches pill style */
+  box-shadow: 0px 4px 10px rgba(75, 78, 252, 0.3) !important;
+  border: none !important;
+}
+
+@media (min-width: 640px) {
+  .nav-active-gradient {
+    height: 36px !important;
+    padding: 0 16px !important;
+    font-size: 14px !important;
+  }
+}
+
+.nav-active-gradient:hover {
+  transform: scale(1.03) !important; /* subtle scale inside header */
+}
+
+/* Pill button (the site's one CTA style). Sized to its label rather than a fixed 148px, so every label
+   ("Start a Project", "Send Message", "See All Works"...) gets the same padding and a properly proportioned
+   icon circle. Height 48px: a comfortable touch target, and it sits well inside the 64px header bar. */
+.btn-pill-shape {
+  width: auto !important;
+  height: 48px !important;
+  border-radius: 100px !important;
+  padding: 0 6px 0 26px !important;
+  justify-content: flex-start !important;
+  position: relative !important;
+  border: 0.68px rgba(255, 255, 255, 0.6) solid !important;
+}
+
+.btn-pill-shape .btn-text-content {
+  width: auto !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 18px;
+}
+
+.btn-pill-text {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.btn-circle-icon-wrapper {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  outline: 0.68px #F5F5FF solid;
+  outline-offset: -0.68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.btn-pill-shape:hover .btn-circle-icon-wrapper {
+  transform: rotate(45deg) scale(1.05);
+}
+
+.btn-circle-icon-wrapper svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 480px) {
+  .btn-pill-shape {
+    height: 46px !important;
+    padding-left: 22px !important;
+  }
+  .btn-circle-icon-wrapper {
+    width: 34px;
+    height: 34px;
+  }
+}

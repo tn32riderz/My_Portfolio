@@ -1,40 +1,43 @@
-import fs from 'fs/promises';
-import path from 'path';
-import Hero from '../sections/Hero';
-import ExperienceTicker from '../sections/ExperienceTicker';
-import AboutMe from '../sections/AboutMe';
-import Experience from '../sections/Experience';
-import Projects from '../sections/Projects';
-import Services from '../sections/Services';
-import Testimonials from '../sections/Testimonials';
-import Blogs from '../sections/Blogs';
-import WorkTicker from '../sections/WorkTicker';
-import Contact from '../sections/Contact';
-import Footer from '../sections/Footer';
+import { getDb, publishedList } from '@/lib/db';
+import { getExperienceContent, getHomeProjects } from '@/lib/content';
+import SmoothScroll from '@/components/layout/SmoothScroll';
+import Hero from '@/components/sections/Hero';
+import ExperienceTicker from '@/components/sections/ExperienceTicker';
+import AboutMe from '@/components/sections/AboutMe';
+import Experience from '@/components/sections/Experience';
+import Projects from '@/components/sections/Projects';
+import Services from '@/components/sections/Services';
+import Testimonials from '@/components/sections/Testimonials';
+import Blogs from '@/components/sections/Blogs';
+import WorkTicker from '@/components/sections/WorkTicker';
+import Contact from '@/components/sections/Contact';
+import Footer from '@/components/sections/Footer';
+
+// Re-generate daily so the years/durations on the page stay current.
+export const revalidate = 86400;
 
 export default async function Home() {
-  let db = {};
-  try {
-    const dbPath = path.join(process.cwd(), 'src', 'db.json');
-    const dbData = await fs.readFile(dbPath, 'utf-8');
-    db = JSON.parse(dbData);
-  } catch (error) {
-    console.warn('Failed to load db.json, falling back to static defaults', error);
-  }
+  const db = await getDb();
+
+  const testimonials = publishedList(db.testimonials);
+  const { experiences, education, careerStart } = await getExperienceContent();
+  // Projects chosen (and ordered) in the admin "Home page highlights" box.
+  const homeProjects = await getHomeProjects();
 
   return (
     <main>
-      <Hero settings={db.settings} />
-      <ExperienceTicker clientLogos={db.clientLogos} />
-      <AboutMe settings={db.settings} />
-      <Experience experience={db.experiences} />
-      <Projects caseStudies={db.caseStudies} />
-      <Services services={db.services} />
-      <Testimonials testimonials={db.testimonials} />
+      <SmoothScroll />
+      <Hero />
+      <ExperienceTicker careerStart={careerStart} />
+      <AboutMe careerStart={careerStart} />
+      <Experience experiences={experiences} education={education} careerStart={careerStart} />
+      <Projects caseStudies={homeProjects} />
+      <Services services={publishedList(db.services)} />
+      {testimonials.length > 0 && <Testimonials testimonials={testimonials} />}
       {/* <Blogs blogs={db.blogs} /> */}
       <WorkTicker />
-      <Contact settings={db.settings} />
-      <Footer settings={db.settings} />
+      <Contact />
+      <Footer />
     </main>
   );
 }

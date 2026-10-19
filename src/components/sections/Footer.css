@@ -1,0 +1,268 @@
+/* ════════════════════════════════════════
+   Footer Section
+   ════════════════════════════════════════ */
+
+.footer-section {
+  position: relative;
+  width: 100%;
+  background-color: #020106;
+  overflow: hidden;
+  padding: 0 53px;
+}
+
+/* ─── Background Glow Ellipses ────────── */
+.footer-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-glow-ellipse {
+  position: absolute;
+  border-radius: 9999px;
+}
+
+.footer-glow-1 {
+  width: 466px;
+  height: 259px;
+  left: 470px;
+  top: 220px;
+  background: #4B4EFC;
+  filter: blur(100px);
+  opacity: 0.55;
+  transform: rotate(22deg);
+}
+
+.footer-glow-2 {
+  width: 1049px;
+  height: 323px;
+  left: 660px;
+  top: 360px;
+  background: #7375FD;
+  filter: blur(71px);
+  opacity: 0.4;
+  transform: rotate(23deg);
+}
+
+.footer-glow-3 {
+  width: 1580px;
+  height: 425px;
+  left: 77px;
+  top: 200px;
+  background: #4B4EFC;
+  filter: blur(100px);
+  opacity: 0.25;
+  transform: rotate(23deg);
+}
+
+.footer-glow-4 {
+  width: 595px;
+  height: 116px;
+  left: 421px;
+  bottom: 0;
+  background: #C3C4FE;
+  filter: blur(61px);
+  opacity: 0.35;
+}
+
+/* ─── Watermark Letters ───────────────── */
+.footer-watermark {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0px;
+  pointer-events: none;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+.footer-watermark svg {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: block;
+}
+
+/* ─── Inner Layout ───────────────────── */
+.footer-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 120px 0 160px;
+  gap: 40px;
+}
+
+/* ─── CTA Column (Left) ──────────────── */
+.footer-cta-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* children hug their content; the default (stretch) made the button fill the column */
+  gap: 32px;
+  max-width: 520px;
+}
+
+.footer-headline {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* ─── Nav Column (Right) ─────────────── */
+.footer-nav-col {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-nav-heading {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 44px;
+  margin-bottom: 7px;
+  white-space: nowrap;
+}
+
+/* Quick Links */
+.footer-links-group {
+  min-width: 100px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-nav-link {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  line-height: 22px;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #ffffff;
+}
+
+/* Contact */
+.footer-contact-group {
+  min-width: 240px;
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.footer-contact-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contact-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  line-height: 22px;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-text:hover {
+  color: #ffffff;
+}
+
+/* ─── Bottom Bar ─────────────────────── */
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.03em;
+}
+
+/* ─── Responsive ─────────────────────── */
+@media (max-width: 900px) {
+  .footer-section {
+    padding: 0 32px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    padding: 80px 0 42px;
+  }
+
+  .footer-headline {
+    font-size: clamp(28px, 6vw, 44px);
+  }
+
+  .footer-watermark {
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-section {
+    padding: 0 20px;
+  }
+
+  .footer-nav-col {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-inner {
+    padding: 24px 0 32px;
+  }
+
+  /* SVG scales automatically with width: 100% */
+
+  .footer-headline {
+    font-size: 28px;
+  }
+}

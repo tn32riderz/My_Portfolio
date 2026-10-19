@@ -1,0 +1,94 @@
+/* Experience Section Styling */
+
+.experience-section {
+  width: 100%;
+  background-color: #020106;
+  padding: 100px 80px 120px;
+  position: relative;
+  z-index: 10;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.experience-header {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s var(--ease-smooth), transform 1s var(--ease-smooth);
+}
+
+.experience-header--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.experience-sparkle {
+  color: #4B4EFC;
+  font-size: 14px;
+  text-shadow: 0 0 8px rgba(75, 78, 252, 0.5);
+}
+
+.experience-label-text {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.04em;
+}
+
+.experience-heading {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* Timeline / Card List */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .experience-section {
+    padding: 80px 24px 100px;
+  }
+}
+
+.experience-header--sub {
+  margin-top: 96px;
+}
+
+/* Education (left) and Certifications (right) side by side */
+.experience-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.experience-duo .experience-header--col {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 992px) {
+  .experience-duo {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+

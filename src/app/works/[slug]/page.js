@@ -1,47 +1,40 @@
-import fs from 'fs/promises';
-import path from 'path';
 import { notFound } from 'next/navigation';
-import ProjectDetail from './ProjectDetail';
+import { getProjectBySlug, getPublishedProjects } from '@/lib/projects';
+import { getImageMetaMap, projectImageSources } from '@/lib/imageMeta';
+import ProjectDetail from '@/components/works/ProjectDetail';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  let db = {};
-  try {
-    const dbPath = path.join(process.cwd(), 'src', 'db.json');
-    const raw = await fs.readFile(dbPath, 'utf-8');
-    db = JSON.parse(raw);
-  } catch { /* noop */ }
-
-  const cs = (db.caseStudies || []).find(c => c.slug === slug);
-  if (!cs) {
-    return { title: 'Project | Portfolio' };
-  }
+  const project = await getProjectBySlug(slug);
+  if (!project) return { title: 'Project not found | Portfolio' };
   return {
-    title: cs.seoTitle || `${cs.title} | Portfolio`,
-    description: cs.seoDescription || cs.title,
+    title: project.seoTitle || `${project.title} | Portfolio`,
+    description: project.seoDescription || project.title,
   };
 }
 
 export default async function ProjectDetailPage({ params }) {
   const { slug } = await params;
-  let db = {};
-  try {
-    const dbPath = path.join(process.cwd(), 'src', 'db.json');
-    const raw = await fs.readFile(dbPath, 'utf-8');
-    db = JSON.parse(raw);
-  } catch { /* noop */ }
+  const project = await getProjectBySlug(slug);
+  if (!project) notFound();
 
-  const caseStudies = db.caseStudies || [];
-  const project = caseStudies.find(cs => cs.slug === slug);
+  const all = await getPublishedProjects();
+  const index = all.findIndex((p) => p.id === project.id);
+  const others = all.filter((p) => p.id !== project.id);
+  const related = [
+    ...others.filter((p) => p.category === project.category),
+    ...others.filter((p) => p.category !== project.category),
+  ].slice(0, 4);
 
-  if (!project) {
-    // For demo slugs (static defaults), pass null so client renders demo content
-    return <ProjectDetail project={null} slug={slug} relatedProjects={[]} />;
-  }
+  const imageMeta = await getImageMetaMap([...projectImageSources(project), ...related.map((p) => p.coverImage)]);
 
-  const related = caseStudies
-    .filter(cs => cs.id !== project.id && cs.category === project.category && (cs.status === 'Active' || cs.status === 'Published'))
-    .slice(0, 3);
-
-  return <ProjectDetail project={project} slug={slug} relatedProjects={related} />;
+  return (
+    <ProjectDetail
+      project={project}
+      imageMeta={imageMeta}
+      related={related.map((p) => ({ ...p, coverBlur: imageMeta[p.coverImage]?.blur }))}
+      prev={index > 0 ? all[index - 1] : null}
+      next={index >= 0 && index < all.length - 1 ? all[index + 1] : null}
+    />
+  );
 }

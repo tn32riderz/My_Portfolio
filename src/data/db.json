@@ -1,0 +1,707 @@
+{
+  "services": [
+    {
+      "id": "srv-1",
+      "title": "Product & UX Design",
+      "highlightText": "Research-led design from first sketch to developer handoff.",
+      "description": "I turn business requirements into clear, accessible interfaces, backed by research and usability testing.",
+      "category": "Design",
+      "points": [
+        "User research",
+        "Wireframes & prototypes",
+        "Design systems",
+        "Developer handoff"
+      ],
+      "icon": "Figma",
+      "displayOrder": 1,
+      "status": "Published",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "image": ""
+    },
+    {
+      "id": "srv-2",
+      "title": "AI Product Design",
+      "highlightText": "Interfaces for GenAI, agents and LLM workflows.",
+      "description": "Conversational UX and agent-based product design for AI tools, from concept to architecture.",
+      "category": "AI",
+      "points": [
+        "Conversational UX",
+        "LLM workflows",
+        "AI agents (Python)",
+        "n8n automation"
+      ],
+      "icon": "Share2",
+      "displayOrder": 2,
+      "status": "Published",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "image": "/uploads/1792347582319-01ccb13b.webp"
+    },
+    {
+      "id": "srv-3",
+      "title": "Websites & E-commerce",
+      "highlightText": "Fast, well-built sites that are easy to maintain.",
+      "description": "Website UI/UX and build for small businesses, including e-commerce backends and SEO.",
+      "category": "Web",
+      "points": [
+        "Website UI/UX",
+        "Webflow & Framer",
+        "Node.js e-commerce backend",
+        "SEO"
+      ],
+      "icon": "Globe",
+      "displayOrder": 3,
+      "status": "Published",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "image": ""
+    },
+    {
+      "id": "srv-4",
+      "title": "Brand Identity",
+      "highlightText": "A clear identity for small businesses and startups.",
+      "description": "Logo, brand identity and graphic design that stay consistent across web and print.",
+      "category": "Brand",
+      "points": [
+        "Logo design",
+        "Brand guidelines",
+        "Graphic design",
+        "Posters"
+      ],
+      "icon": "PenTool",
+      "displayOrder": 4,
+      "status": "Published",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "image": "/uploads/1792350490845-730830e5.webp"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "tst-1",
+      "userName": "Jennifer Law",
+      "companyName": "Spotify",
+      "highlightText": "Outstanding delivery",
+      "content": "Working with this team has completely streamlined our design cycles. The quality of execution is outstanding.",
+      "rating": 5,
+      "displayOrder": 1,
+      "status": "Active",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "tst-2",
+      "userName": "Skylar Calzoni",
+      "companyName": "Stripe",
+      "highlightText": "Incredibly professional",
+      "content": "Their design system transition saved our frontend developer team easily 30+ hours. Super helpful team.",
+      "rating": 5,
+      "displayOrder": 2,
+      "status": "Active",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "cs-collabkit",
+      "title": "Collabkit",
+      "company": "Collabkit (client work)",
+      "category": "Product Design",
+      "liveViewUrl": "",
+      "timelines": "Freelance, live",
+      "serviceProvided": [
+        "Website UI/UX",
+        "Studio–Creator platform",
+        "Brand–Creator platform"
+      ],
+      "coverImage": "/assets/images/case-studies/covers/collabkit.svg",
+      "status": "Published",
+      "slug": "collabkit",
+      "seoTitle": "Collabkit | Vignesh Vaithiyanathan",
+      "seoDescription": "Three live products designed for a paying client: company website, Studio–Creator platform and Brand–Creator platform.",
+      "createdAt": "2026-03-01T00:00:00Z",
+      "appreciations": 0,
+      "views": 0,
+      "contentBlocks": [
+        {
+          "id": "blk-collabkit-1",
+          "type": "Heading",
+          "content": "Three live products for one client",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-collabkit-2",
+          "type": "Paragraph",
+          "content": "I designed three live Collabkit products for a paying client: the company website, a Studio–Creator platform and a Brand–Creator platform. The work covered UX, UI and the visual system that ties the three products together.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-collabkit-3",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Role",
+              "value": "Product / UI/UX Designer"
+            },
+            {
+              "label": "Type",
+              "value": "Client work, live"
+            },
+            {
+              "label": "Deliverables",
+              "value": "Website + 2 platforms"
+            }
+          ]
+        },
+        {
+          "id": "blk-1792347656700-33875",
+          "type": "Image",
+          "content": "",
+          "settings": {
+            "layout": "stack",
+            "columns": 2,
+            "gap": 16,
+            "radius": 12
+          },
+          "images": [
+            "/uploads/1792347662453-783dfe3e.webp"
+          ]
+        }
+      ],
+      "featured": false
+    },
+    {
+      "id": "cs-monimind",
+      "title": "MoniMind",
+      "company": "Self-initiated",
+      "category": "FinTech OS UX",
+      "liveViewUrl": "",
+      "timelines": "Concept",
+      "serviceProvided": [
+        "Product Design",
+        "Research",
+        "English + Arabic (RTL)"
+      ],
+      "coverImage": "/uploads/1792342252132-f4dc44e0.jpg",
+      "status": "Published",
+      "slug": "monimind",
+      "seoTitle": "MoniMind | Vignesh Vaithiyanathan",
+      "seoDescription": "A FinTech UX case study: a unified financial home with an AI assistant, in English (LTR) and Arabic (RTL).",
+      "createdAt": "2026-02-01T00:00:00Z",
+      "appreciations": 0,
+      "views": 0,
+      "contentBlocks": [
+        {
+          "id": "blk-monimind-1",
+          "type": "Heading",
+          "content": "One financial home, in English and Arabic",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-monimind-2",
+          "type": "Paragraph",
+          "content": "MoniMind is a self-initiated FinTech case study. I designed a unified financial home with accounts, cards, wallets, Scan & Pay, send and request money, bill payments, international transfers, savings goals, spending insights, forecasts, investments and cashback, backed by financial-product and competitor research.\n\nI also designed an AI financial assistant for answers, personalized recommendations and insights, in full English (LTR) and Arabic (RTL) interfaces.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-monimind-3",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Role",
+              "value": "Product Designer"
+            },
+            {
+              "label": "Type",
+              "value": "Self-initiated case study"
+            },
+            {
+              "label": "Status",
+              "value": "Concept"
+            },
+            {
+              "label": "Languages",
+              "value": "English (LTR), Arabic (RTL)"
+            }
+          ]
+        },
+        {
+          "id": "blk-1792342589978-85419",
+          "type": "Image",
+          "content": "",
+          "settings": {
+            "layout": "stack",
+            "columns": 2,
+            "gap": 0,
+            "radius": 0
+          },
+          "images": [
+            "/uploads/1792342601844-2265f663.jpg",
+            "/uploads/1792342607548-bd8483ef.jpg",
+            "/uploads/1792342612499-f84b7e71.jpg",
+            "/uploads/1792342621031-90e9249c.jpg",
+            "/uploads/1792342625898-c0bb0e42.jpg",
+            "/uploads/1792342630738-a0a1de6d.jpg",
+            "/uploads/1792342636202-d13229cb.jpg",
+            "/uploads/1792342643008-bc572e57.jpg",
+            "/uploads/1792342648677-5f577d4d.jpg",
+            "/uploads/1792342658354-12847af7.jpg",
+            "/uploads/1792342666629-023557da.jpg",
+            "/uploads/1792342673257-7a59af13.jpg",
+            "/uploads/1792342678910-22103635.jpg",
+            "/uploads/1792342720630-40f4faff.jpg",
+            "/uploads/1792342734451-1b7859ab.jpg",
+            "/uploads/1792342945218-44888995.jpg",
+            "/uploads/1792342965473-af4e7610.jpg",
+            "/uploads/1792342979914-2e745a41.jpg",
+            "/uploads/1792342988986-2f40e562.jpg",
+            "/uploads/1792342995423-bae34765.jpg",
+            "/uploads/1792343000901-19da4c67.jpg",
+            "/uploads/1792343011389-acc3e73c.jpg",
+            "/uploads/1792343027433-6085ff60.jpg",
+            "/uploads/1792343048498-d003f1af.jpg",
+            "/uploads/1792343086559-622ff6fd.jpg",
+            "/uploads/1792343094478-35b90d8b.jpg",
+            "/uploads/1792343103268-c56008e9.jpg",
+            "/uploads/1792343110192-3c543eb1.jpg",
+            "/uploads/1792343120951-94884f2d.jpg",
+            "/uploads/1792343130911-18d28f32.jpg",
+            "/uploads/1792343139522-ecc8fc9a.jpg",
+            "/uploads/1792343150277-45d54cd1.jpg",
+            "/uploads/1792343172007-831a151e.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-d2dbuild-ai",
+      "title": "D2DBuild AI",
+      "company": "Self-initiated",
+      "category": "AI Product",
+      "liveViewUrl": "",
+      "timelines": "In development",
+      "serviceProvided": [
+        "AI Product Design",
+        "Product Building",
+        "Architecture"
+      ],
+      "coverImage": "/assets/images/case-studies/covers/d2dbuild-ai.svg",
+      "status": "Published",
+      "slug": "d2dbuild-ai",
+      "seoTitle": "D2DBuild AI | Vignesh Vaithiyanathan",
+      "seoDescription": "An AI-powered no-code/low-code platform for non-technical users to design, build and deploy apps and websites.",
+      "createdAt": "2026-01-01T00:00:00Z",
+      "appreciations": 0,
+      "views": 0,
+      "contentBlocks": [
+        {
+          "id": "blk-d2dbuild-ai-1",
+          "type": "Heading",
+          "content": "An AI builder for people who do not code",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-d2dbuild-ai-2",
+          "type": "Paragraph",
+          "content": "D2DBuild AI is an AI-powered no-code/low-code platform that lets non-technical users design, build and deploy apps and websites. I own the product concept, UX, UI and architecture, covering the AI Builder, design canvas, workflow logic, database, integrations and deployment.\n\nThe architecture is agent-based: a main agent coordinates UI, integration, backend, deployment and automation agents, alongside a voice assistant.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-d2dbuild-ai-3",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Role",
+              "value": "Product Designer & Product Builder"
+            },
+            {
+              "label": "Type",
+              "value": "Self-initiated AI product"
+            },
+            {
+              "label": "Status",
+              "value": "In development"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cs-levaal",
+      "title": "Levaal",
+      "company": "Self-initiated",
+      "category": "AI EdTech",
+      "liveViewUrl": "",
+      "timelines": "In development",
+      "serviceProvided": [
+        "AI EdTech",
+        "Design research",
+        "UI/UX"
+      ],
+      "coverImage": "/assets/images/case-studies/covers/levaal.svg",
+      "status": "Published",
+      "slug": "levaal",
+      "seoTitle": "Levaal | Vignesh Vaithiyanathan",
+      "seoDescription": "An AI-powered LMS for career-ready learning that connects students, mentors and recruiters.",
+      "createdAt": "2025-12-01T00:00:00Z",
+      "appreciations": 0,
+      "views": 0,
+      "contentBlocks": [
+        {
+          "id": "blk-levaal-1",
+          "type": "Heading",
+          "content": "Learning that leads to a career",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-levaal-2",
+          "type": "Paragraph",
+          "content": "Levaal is an AI-powered learning management system for career-ready learning. It connects students, mentors and recruiters through personalized learning journeys, portfolio creation and interview preparation. I led the design research, product concept and UI/UX.",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-levaal-3",
+          "type": "Metrics",
+          "content": "",
+          "metrics": [
+            {
+              "label": "Role",
+              "value": "Product Designer & Product Builder"
+            },
+            {
+              "label": "Type",
+              "value": "Self-initiated AI EdTech product"
+            },
+            {
+              "label": "Status",
+              "value": "In development"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blg-1",
+      "title": "Boon Web Application Design system",
+      "slug": "boon-design-system",
+      "category": "SaaS Design",
+      "readTime": "5 Mins Read",
+      "tags": [
+        "User Research",
+        "UI Design",
+        "Development"
+      ],
+      "coverImage": "https://images.unsplash.com/photo-1541462608141-2758574e4055?auto=format&fit=crop&w=400&h=250&q=80",
+      "content": "Full visual analysis of design tokens, interactive components, and responsive typography grid guidelines.",
+      "status": "Published",
+      "createdAt": "2023-07-14T12:15:00Z",
+      "blocks": [
+        {
+          "id": "blk-b1",
+          "type": "Heading",
+          "content": "About System Architecture",
+          "settings": {
+            "alignment": "left"
+          }
+        },
+        {
+          "id": "blk-b2",
+          "type": "Paragraph",
+          "content": "Building modular responsive tokens under Tailwind CSS for fast compilation.",
+          "settings": {
+            "alignment": "left"
+          }
+        }
+      ]
+    }
+  ],
+  "contactLeads": [
+    {
+      "id": "lead-1",
+      "name": "Jennifer Law",
+      "email": "jennifer@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "Spotify Ltd",
+      "message": "Let's connect regarding a design request.",
+      "status": "Clients",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "lead-2",
+      "name": "Skylar Calzoni",
+      "email": "calzoni@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "Stripe Inc",
+      "message": "We need help transitioning to Tailwind CSS.",
+      "status": "Screening",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "lead-3",
+      "name": "Alfredo Gouse",
+      "email": "alfredo@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "DesignCo",
+      "message": "Love your recent Case Studies. Can we schedule a call?",
+      "status": "Screening",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "lead-4",
+      "name": "James Carder",
+      "email": "james@gmail.com",
+      "phone": "(629) 555-0129",
+      "company": "Acme Inc",
+      "message": "Requesting quote for landing page rewrite.",
+      "status": "Lead",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=40&h=40&q=80",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "media": [
+    {
+      "id": "media-1",
+      "name": "mongodb_logo.png",
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=40&q=80",
+      "type": "logo",
+      "size": "45 KB",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "media-2",
+      "name": "boon_case_cover.png",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80",
+      "type": "image",
+      "size": "180 KB",
+      "createdAt": "2023-07-14T12:15:00Z"
+    },
+    {
+      "id": "media-3",
+      "name": "jennifer_profile.jpg",
+      "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80",
+      "type": "image",
+      "size": "32 KB",
+      "createdAt": "2023-07-14T12:15:00Z"
+    }
+  ],
+  "settings": {
+    "general": {
+      "siteName": "Vignesh Vaithiyanathan",
+      "siteDescription": "AI Lead Product Designer"
+    },
+    "branding": {
+      "logoUrl": "",
+      "faviconUrl": ""
+    },
+    "contact": {
+      "email": "vignesh.creativeux@gmail.com",
+      "phone": "+971 54 142 8466",
+      "address": "UAE"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/vigneshcreates",
+      "x": "",
+      "github": "",
+      "instagram": "",
+      "youtube": "",
+      "behance": "https://www.behance.net/VigneshCreates"
+    },
+    "email": {
+      "resendApiKey": "",
+      "fromEmail": "onboarding@resend.dev"
+    },
+    "seo": {
+      "defaultMetaTitle": "Vignesh Vaithiyanathan | AI Lead Product Designer",
+      "defaultMetaDescription": "AI Lead Product Designer with 4.5 years of experience across AI, SaaS and enterprise products."
+    }
+  },
+  "folders": [
+    {
+      "id": "folder-case-studies",
+      "name": "Case Studies",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    },
+    {
+      "id": "folder-blogs",
+      "name": "Blogs",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    },
+    {
+      "id": "folder-logos",
+      "name": "Client Logos",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    },
+    {
+      "id": "folder-testimonials",
+      "name": "Testimonials",
+      "createdAt": "2026-07-13T14:03:54.945Z"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "co-independent",
+      "company": "Independent",
+      "location": "Remote",
+      "status": "Published",
+      "displayOrder": 1,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "positions": [
+        {
+          "id": "freelance",
+          "role": "Freelance Product / UI/UX Designer",
+          "start": "2022-05",
+          "end": "",
+          "description": "Designing and building for small businesses and startups, end to end.",
+          "points": [
+            "Designed 3 live Collabkit products for a paying client: the company website, a Studio–Creator platform and a Brand–Creator platform.",
+            "Delivered website UI/UX, logo and brand identity, and graphic design for small business clients.",
+            "Built Python AI agents and n8n workflows for small businesses, plus a Node.js e-commerce backend and SEO."
+          ],
+          "skills": [
+            "Product Design",
+            "Brand Identity",
+            "AI Agents",
+            "n8n",
+            "Node.js"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co-widezo-private-limited",
+      "company": "Widezo Private Limited",
+      "location": "Puducherry, India",
+      "status": "Published",
+      "displayOrder": 2,
+      "createdAt": "2026-01-01T00:00:00Z",
+      "positions": [
+        {
+          "id": "widezo-lead",
+          "role": "Lead Product Designer",
+          "start": "2024-10",
+          "end": "2026-01",
+          "description": "Led UX and product design end to end across AI SaaS, EdTech, healthcare, e-commerce and industrial SaaS in Agile/Scrum teams.",
+          "points": [
+            "Products: Edzo (education), Cable TV Management (telecom), Hotel Call Ordering (mobile app), VIN punching software, e-commerce checkout and payments, and internal systems.",
+            "Designed ERP and CRM systems, dashboards and analytics interfaces (Power BI, Tableau customization) for API-driven products.",
+            "Built design systems and reusable component libraries with documentation and UI/UX standards.",
+            "Prepared handover specs, checked builds against approved designs, and ran heuristic evaluations, A/B tests, UI reviews and UAT support."
+          ],
+          "skills": [
+            "Design Systems",
+            "Enterprise UX",
+            "Agile / Scrum",
+            "Jira",
+            "Accessibility"
+          ]
+        },
+        {
+          "id": "widezo-ux",
+          "role": "User Experience Designer",
+          "start": "2023-06",
+          "end": "2024-10",
+          "description": "Ran healthcare research and designed interactive prototypes in Agile sprints.",
+          "points": [
+            "Patient Document Tracking: about 20 doctor interviews and 6 usability tests.",
+            "Live Hospital Patient Tracking: about 5 interviews and 2 usability tests.",
+            "Designed micro-interactions, motion and prototypes, and handed off to developers each sprint."
+          ],
+          "skills": [
+            "User Research",
+            "Usability Testing",
+            "Prototyping",
+            "Motion"
+          ]
+        },
+        {
+          "id": "widezo-intern",
+          "role": "UX Designer Intern",
+          "start": "2022-07",
+          "end": "2023-06",
+          "description": "Redesigned websites and created brand and graphic designs, with hands-on UI work for web and mobile in Figma.",
+          "points": [
+            "Created wireframes and prototypes, supported research and usability tests, and handed off designs to developers."
+          ],
+          "skills": [
+            "Figma",
+            "Wireframing",
+            "Web Redesign",
+            "Graphic Design"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "btech",
+      "role": "B.Tech, Information Technology",
+      "company": "Mailam Engineering College",
+      "period": "2019 — 2023",
+      "location": "Villupuram, Tamil Nadu, India",
+      "description": "CGPA 8.03 / 10.0",
+      "kind": "Education",
+      "status": "Published",
+      "displayOrder": 1,
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "google-ux",
+      "role": "Google UX Design Professional Certificate",
+      "company": "Coursera (Google)",
+      "period": "2022",
+      "description": "Professional certificate in UX design.",
+      "kind": "Certification",
+      "status": "Published",
+      "displayOrder": 2,
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "demen",
+      "role": "Advanced UI/UX Design Mentorship Program",
+      "company": "De Mentee Academy",
+      "period": "Jun 2022 — Dec 2022",
+      "description": "Mentored program in advanced UI/UX design.",
+      "kind": "Certification",
+      "status": "Published",
+      "displayOrder": 3,
+      "createdAt": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "ibm",
+      "role": "IBM SkillsBuild AI Fundamentals",
+      "company": "IBM",
+      "period": "2026",
+      "description": "Foundations of artificial intelligence.",
+      "kind": "Certification",
+      "status": "Published",
+      "displayOrder": 4,
+      "createdAt": "2026-01-01T00:00:00Z"
+    }
+  ],
+  "homeProjects": [
+    "cs-monimind",
+    "cs-d2dbuild-ai",
+    "cs-levaal"
+  ]
+}

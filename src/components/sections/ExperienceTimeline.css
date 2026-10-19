@@ -1,0 +1,324 @@
+/* Work experience: zig-zag timeline */
+.xp {
+  position: relative;
+  margin-top: 8px;
+}
+
+.xp-spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+.xp-spine__fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: top;
+  background: linear-gradient(to bottom, #8f92ff, #4B4EFC 60%, rgba(75, 78, 252, 0.3));
+  box-shadow: 0 0 14px rgba(75, 78, 252, 0.8);
+  border-radius: 2px;
+}
+
+.xp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  margin: 0;
+  padding: 0;
+}
+
+.xp-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 96px;
+}
+
+.xp-item.is-left .xp-card { grid-column: 1; }
+.xp-item.is-right .xp-card { grid-column: 2; }
+
+/* year bubble on the spine */
+.xp-node {
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #0b0b16;
+  border: 1.5px solid #4B4EFC;
+  box-shadow: 0 0 0 6px #020106, 0 0 24px rgba(75, 78, 252, 0.45);
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.1;
+}
+
+.xp-node b { font-size: 14px; font-weight: 600; color: #fff; }
+.xp-node small { font-size: 11px; color: rgba(255, 255, 255, 0.55); margin-top: 2px; }
+
+/* glass card with gradient edge + pointer spotlight */
+.xp-card {
+  --mx: 50%;
+  --my: 0%;
+  position: relative;
+  padding: 30px 32px 22px;
+  border-radius: 28px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0b0b14, #0b0b14) padding-box,
+    linear-gradient(140deg, rgba(143, 146, 255, 0.55), rgba(255, 255, 255, 0.07) 35%, rgba(75, 78, 252, 0.18) 100%) border-box;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.xp-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(75, 78, 252, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.xp-card:hover { transform: translateY(-4px); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), 0 0 40px rgba(75, 78, 252, 0.12); }
+.xp-card:hover::before { opacity: 1; }
+
+/* connector from card to spine */
+.xp-card::after {
+  content: '';
+  position: absolute;
+  top: 46px;
+  width: 48px;
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(75, 78, 252, 0.7), rgba(75, 78, 252, 0));
+}
+.xp-item.is-left .xp-card::after { right: -48px; transform: scaleX(-1); }
+.xp-item.is-right .xp-card::after { left: -48px; }
+
+.xp-card__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.xp-logo {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: radial-gradient(120% 120% at 20% 0%, #8f92ff 0%, #4B4EFC 55%, #23258f 100%);
+  box-shadow: 0 8px 24px rgba(75, 78, 252, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.xp-card__title { flex: 1; min-width: 0; }
+
+.xp-company {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(19px, 1.7vw, 24px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.xp-meta {
+  margin-top: 4px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.xp-tenure {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  text-align: right;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.xp-tenure strong { font-size: 15px; font-weight: 600; color: #c9caff; }
+.xp-tenure span { font-size: 12px; color: rgba(255, 255, 255, 0.45); }
+
+/* positions */
+.xp-roles {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 22px;
+  border-left: 1.5px dashed rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-direction: column;
+}
+
+.xp-role {
+  position: relative;
+  padding: 6px 0;
+}
+
+.xp-role + .xp-role { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+
+.xp-role__dot {
+  position: absolute;
+  left: -29.5px;
+  top: 21px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #0b0b14;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.xp-role.is-open .xp-role__dot { border-color: #8f92ff; }
+.xp-role__dot.is-current { background: #4B4EFC; border-color: #8f92ff; box-shadow: 0 0 12px rgba(75, 78, 252, 0.9); }
+
+.xp-role__head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 12px;
+  padding: 10px 0;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.xp-role__head:disabled { cursor: default; }
+.xp-role__head:focus-visible { outline: 2px solid #8f92ff; outline-offset: 4px; border-radius: 8px; }
+
+.xp-role__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.xp-role__dates {
+  grid-column: 1;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.xp-role__dates b { margin: 0 8px; font-weight: 400; opacity: 0.6; }
+
+.xp-role__chev {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+.xp-role.is-open .xp-role__chev { transform: rotate(180deg); }
+.xp-role__head:hover .xp-role__chev { color: #fff; }
+
+.xp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.xp-pill--live { color: #b9f5cd; background: rgba(46, 204, 113, 0.12); border: 1px solid rgba(46, 204, 113, 0.3); }
+.xp-pill--live i { width: 6px; height: 6px; border-radius: 50%; background: #2ecc71; animation: xp-pulse 1.8s ease-in-out infinite; }
+@keyframes xp-pulse { 50% { box-shadow: 0 0 0 5px rgba(46, 204, 113, 0); opacity: 0.6; } 0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.5); } }
+
+.xp-role__body { padding: 2px 0 14px; display: flex; flex-direction: column; gap: 12px; }
+.xp-role__body[hidden] { display: none; }
+
+.xp-role__summary {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.xp-role__points { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; }
+.xp-role__points li {
+  position: relative;
+  padding-left: 20px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.58);
+}
+.xp-role__points li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.7em;
+  width: 8px;
+  height: 1.5px;
+  background: #4B4EFC;
+}
+
+.xp-skills { display: flex; flex-wrap: wrap; gap: 8px; }
+.xp-skill {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  color: #d7d8ff;
+  background: rgba(75, 78, 252, 0.12);
+  border: 1px solid rgba(75, 78, 252, 0.3);
+}
+
+/* tablet & phone: spine on the left, every card on the right of it */
+@media (max-width: 992px) {
+  .xp-spine { left: 18px; }
+  .xp-list { gap: 40px; }
+  .xp-item { display: block; padding-left: 52px; }
+  .xp-node {
+    left: 18px;
+    top: 26px;
+    min-width: 0;
+    padding: 6px 8px;
+  }
+  .xp-node small { display: none; }
+  .xp-node b { font-size: 11px; }
+  .xp-card { padding: 24px 20px 14px; border-radius: 22px; }
+  .xp-card::after { display: none; }
+  .xp-card__head { flex-wrap: wrap; }
+  .xp-tenure { flex-direction: row; gap: 10px; align-items: baseline; width: 100%; text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .xp-item { padding-left: 46px; }
+  .xp-logo { width: 44px; height: 44px; border-radius: 14px; font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xp-pill--live i { animation: none; }
+  .xp-card, .xp-role__chev { transition: none; }
+}
+
+/* Education / certification cards (same card, no timeline connector) */
+.xp-card--edu { padding: 26px 28px 24px; display: flex; flex-direction: column; gap: 14px; }
+.xp-card--edu::after { display: none; }
+.xp-card--edu .xp-card__head { margin-bottom: 0; }
+.xp-pill--period { align-self: flex-start; color: #c9caff; background: rgba(75, 78, 252, 0.14); border: 1px solid rgba(75, 78, 252, 0.32); font-size: 12px; }
