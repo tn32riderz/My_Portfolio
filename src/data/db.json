@@ -161,11 +161,19 @@
           "settings": {
             "layout": "stack",
             "columns": 2,
-            "gap": 16,
-            "radius": 12
+            "gap": 0,
+            "radius": 0
           },
           "images": [
-            "/uploads/1792347662453-783dfe3e.webp"
+            "/uploads/1792610319365-00bc41d7.webp",
+            "/uploads/1792610331830-0d6f4452.webp",
+            "/uploads/1792610369885-42e97e8a.webp",
+            "/uploads/1792610337649-1e58a8e0.webp",
+            "/uploads/1792610342005-3b7697f2.webp",
+            "/uploads/1792610347922-30573edc.webp",
+            "/uploads/1792610358898-e1ca282e.webp",
+            "/uploads/1792610363101-277687e3.webp",
+            "/uploads/1792610374117-017237a5.webp"
           ]
         }
       ],
