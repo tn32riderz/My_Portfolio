@@ -1,6 +1,7 @@
 import { revalidatePath } from 'next/cache';
 import { checkAdmin } from '@/lib/adminAuth';
 import { getDb, saveDb } from '@/lib/db';
+import { scheduleAutoPush } from '@/lib/autoPush';
 
 /** PUT { ids } sets which case studies appear on the home page, and in what order. */
 export async function PUT(request) {
@@ -19,5 +20,6 @@ export async function PUT(request) {
   db.homeProjects = ids.filter((id) => known.has(id));
   await saveDb(db);
   revalidatePath('/', 'layout');
+  scheduleAutoPush();
   return Response.json({ ok: true, ids: db.homeProjects });
 }

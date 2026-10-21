@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { LogOut, UserCog } from 'lucide-react';
 import { useAdmin } from './AdminContext';
+import PublishStatus from './PublishStatus';
 
 /** Sticky top bar shared by all admin screens; `children` are the screen's action buttons. */
 export default function AdminBar({ title, backHref, backLabel, children }) {
@@ -14,6 +15,7 @@ export default function AdminBar({ title, backHref, backLabel, children }) {
         <h1>{title}</h1>
       </div>
       <div className="ad-row ad-row--wrap">
+        <PublishStatus />
         {children}
         <Link className="ad-btn ad-btn--ghost" href="/admin/account"><UserCog size={16} /> Account</Link>
         <button type="button" className="ad-btn ad-btn--ghost" onClick={logout}><LogOut size={16} /> Log out</button>

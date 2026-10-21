@@ -78,3 +78,15 @@ Resend account email unless you verify a domain). Gmail is used first if both ar
 
 Until one is set the form tells the visitor direct sending is unavailable and opens their email app instead.
 Protections: a hidden honeypot field, input length limits and 5 messages per hour per connection.
+
+## Publishing changes to the live site
+
+Edit locally (`npm run dev`, then `/admin`). With `AUTO_PUSH=true` in `.env.local`, saving content or uploading an
+image waits about 15 seconds for you to finish, then commits only `src/data/db.json` and `public/uploads` and pushes
+the current branch to GitHub. A host connected to the repo (Vercel, Netlify, Render...) then redeploys, so the
+live site updates by itself. The admin top bar shows the status and has a **Publish now** button.
+
+- Your code changes and anything else you have staged are never included or touched.
+- If GitHub has newer commits the push is refused (never forced); run `git pull`, then press Publish now.
+- The dev server needs your GitHub credentials. Push once from your terminal so they are stored in the keychain.
+- This only runs locally (never in production).

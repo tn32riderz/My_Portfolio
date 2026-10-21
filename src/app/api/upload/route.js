@@ -7,6 +7,7 @@ import os from 'os';
 import sharp from 'sharp';
 import { randomBytes } from 'crypto';
 import { checkAdmin } from '@/lib/adminAuth';
+import { scheduleAutoPush } from '@/lib/autoPush';
 
 const TYPES = { 'image/png': 'png', 'image/jpeg': 'jpg', 'image/webp': 'webp', 'image/gif': 'gif', 'image/avif': 'avif' };
 const MAX_WIDTH = 2560; // wider than any screen layout needs; keeps files light without visible loss
@@ -33,7 +34,7 @@ export async function POST(request) {
   // Stream to disk first (no size limit, no second in-memory copy), then optimize from the file.
   const original = path.join(ext === 'gif' ? dir : os.tmpdir(), ext === 'gif' ? `${base}.gif` : `${base}-original.${ext}`);
   await pipeline(Readable.fromWeb(file.stream()), createWriteStream(original));
-  if (ext === 'gif') return Response.json({ url: `/uploads/${base}.gif` });
+  if (ext === 'gif') { scheduleAutoPush(); return Response.json({ url: `/uploads/${base}.gif` }); }
 
   try {
     await sharp(original, { limitInputPixels: false })
@@ -42,6 +43,7 @@ export async function POST(request) {
       .webp({ quality: QUALITY })
       .toFile(path.join(dir, `${base}.webp`));
     await fs.copyFile(original, path.join(dir, `${base}-original.${ext}`));
+    scheduleAutoPush();
     return Response.json({ url: `/uploads/${base}.webp` });
   } catch {
     return Response.json({ error: 'That file could not be read as an image.' }, { status: 422 });

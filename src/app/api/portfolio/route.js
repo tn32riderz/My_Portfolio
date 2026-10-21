@@ -1,6 +1,7 @@
 import { revalidatePath } from 'next/cache';
 import { checkAdmin } from '@/lib/adminAuth';
 import { getDb, saveDb, EDITABLE_COLLECTIONS } from '@/lib/db';
+import { scheduleAutoPush } from '@/lib/autoPush';
 
 const SLUG_RE = /^[a-z0-9-]+$/;
 
@@ -33,6 +34,7 @@ export async function PATCH(request) {
   db[collection] = index === -1 ? [item, ...list] : list.map((i) => (i.id === item.id ? item : i));
   await saveDb(db);
   revalidatePath('/', 'layout');
+  scheduleAutoPush();
   return Response.json({ ok: true });
 }
 
@@ -52,6 +54,7 @@ export async function DELETE(request) {
   if (collection === 'caseStudies' && Array.isArray(db.homeProjects)) db.homeProjects = db.homeProjects.filter((x) => x !== id);
   await saveDb(db);
   revalidatePath('/', 'layout');
+  scheduleAutoPush();
   return Response.json({ ok: true });
 }
 
@@ -84,5 +87,6 @@ export async function PUT(request) {
   db[collection] = items;
   await saveDb(db);
   revalidatePath('/', 'layout');
+  scheduleAutoPush();
   return Response.json({ ok: true, count: items.length });
 }

@@ -153,3 +153,9 @@ a.ad-btn{text-decoration:none}
 
 .ad-sub{display:block;font-size:.72rem;font-weight:400;color:var(--mut)}
 .ad-block__bar .ad-sub{display:inline;margin-left:6px}
+
+/* auto-publish status */
+.ad-publish{display:inline-flex;align-items:center;gap:6px;max-width:360px;font-size:.78rem;color:var(--mut)}
+.ad-publish>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ad-publish.is-ok{color:#7be3a1}.ad-publish.is-error{color:#ff9aa9}.ad-publish.is-pending,.ad-publish.is-pushing{color:#ffd166}
+.ad-publish .ad-link{white-space:nowrap;font-size:.78rem;align-self:auto}
