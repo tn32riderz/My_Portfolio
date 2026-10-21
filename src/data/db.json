@@ -357,7 +357,7 @@
         "Design research",
         "UI/UX"
       ],
-      "coverImage": "/assets/images/case-studies/covers/levaal.svg",
+      "coverImage": "/uploads/1792610774469-63d66bf1.webp",
       "status": "Published",
       "slug": "levaal",
       "seoTitle": "Levaal | Vignesh Vaithiyanathan",
@@ -399,6 +399,38 @@
               "label": "Status",
               "value": "In development"
             }
+          ]
+        },
+        {
+          "id": "blk-1792610788048-57094",
+          "type": "Image",
+          "content": "",
+          "settings": {
+            "layout": "stack",
+            "columns": 2,
+            "gap": 0,
+            "radius": 0
+          },
+          "images": [
+            "/uploads/1792610814038-b2f8af77.webp",
+            "/uploads/1792610818229-66316230.webp",
+            "/uploads/1792610821543-6e18e5a1.webp",
+            "/uploads/1792610824932-4837018e.webp",
+            "/uploads/1792610829140-c8887761.webp",
+            "/uploads/1792610835287-a4e5b3b5.webp",
+            "/uploads/1792610841198-fa65f20b.webp",
+            "/uploads/1792610850256-017eb908.webp",
+            "/uploads/1792610854636-f1d41cf5.webp",
+            "/uploads/1792610858684-03a923c0.webp",
+            "/uploads/1792610865042-d7adc776.webp",
+            "/uploads/1792610869106-933a5873.webp",
+            "/uploads/1792610876948-c8b23520.webp",
+            "/uploads/1792610884105-50d9c9f8.webp",
+            "/uploads/1792610890305-0618b661.webp",
+            "/uploads/1792610894922-90db1184.webp",
+            "/uploads/1792610900925-738f70d2.webp",
+            "/uploads/1792610910298-618730e4.webp",
+            "/uploads/1792610918629-589cf471.webp"
           ]
         }
       ]
