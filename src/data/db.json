@@ -161,7 +161,7 @@
           "settings": {
             "layout": "stack",
             "columns": 2,
-            "gap": 0,
+            "gap": 24,
             "radius": 0
           },
           "images": [
