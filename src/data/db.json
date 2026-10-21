@@ -34,25 +34,7 @@
       "displayOrder": 2,
       "status": "Published",
       "createdAt": "2026-01-01T00:00:00Z",
-      "image": "/uploads/1792347582319-01ccb13b.webp"
-    },
-    {
-      "id": "srv-3",
-      "title": "Websites & E-commerce",
-      "highlightText": "Fast, well-built sites that are easy to maintain.",
-      "description": "Website UI/UX and build for small businesses, including e-commerce backends and SEO.",
-      "category": "Web",
-      "points": [
-        "Website UI/UX",
-        "Webflow & Framer",
-        "Node.js e-commerce backend",
-        "SEO"
-      ],
-      "icon": "Globe",
-      "displayOrder": 3,
-      "status": "Published",
-      "createdAt": "2026-01-01T00:00:00Z",
-      "image": ""
+      "image": "/uploads/1792611154913-236aa7f8.webp"
     },
     {
       "id": "srv-4",
